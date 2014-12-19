@@ -2,9 +2,9 @@
 //Jordan Secret
 //All work here is honestly obtained and is my own.
 
-int leds[] = {2,3,4,5,6,7,8,9,9,8,7,6,5,4,3,2};
+int leds[] = {2,3,4,5,6,7,8,9,9,8,7,6,5,4,3,2};//led pins
 
-void ledArray() {
+void ledArray() {//does the pin switching
   for(int i = 0; i < 16; i++){
     digitalWrite(leds[i], 1);
     delay(250);
