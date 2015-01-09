@@ -81,26 +81,26 @@ void alarm(int style) {
   for(int i = 0; i < 8; i++){
     digitalWrite(alarms[i], 1);
     digitalWrite(alarms[i+1], 1);
-    tone(spkr, 150, 750);
-    delay(750);
+    tone(spkr, 150, 200);
+    delay(200);
     digitalWrite(alarms[i], 0);
-    tone(spkr, 150, 750);
-    delay(750);
+    digitalWrite(alarms[i+1], 0);
+    delay(150);
   }
   digitalWrite(alarms[8], 0);
   }
   else if(style = 2){
     for(int i = 0; i < 8; i+=4){
-    digitalWrite(alarms[i], 1);
-    digitalWrite(alarms[i+1], 1);
-    digitalWrite(alarms[i+2], 1);
-    digitalWrite(alarms[i+3], 1);
+    digitalWrite(alarms2[i], 1);
+    digitalWrite(alarms2[i+1], 1);
+    digitalWrite(alarms2[i+2], 1);
+    digitalWrite(alarms2[i+3], 1);
     tone(spkr, 150, 750);
     delay(750);
-    digitalWrite(alarms[i], 0);
-    digitalWrite(alarms[i+1], 0);
-    digitalWrite(alarms[i+2], 0);
-    digitalWrite(alarms[i+3], 0);
+    digitalWrite(alarms2[i], 0);
+    digitalWrite(alarms2[i+1], 0);
+    digitalWrite(alarms2[i+2], 0);
+    digitalWrite(alarms2[i+3], 0);
     tone(spkr, 150, 750);
     delay(750);
   }
@@ -122,9 +122,9 @@ void setup() {
 }
 
 void loop() {
-  for(int z = 0; z < 4; z++){
-  alarm(1);
-  }
+//  for(int z = 0; z < 4; z++){
+//  alarm(1);
+//  }
   for(int z = 0; z < 4; z++){
    alarm(2);
   }
